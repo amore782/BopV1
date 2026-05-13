@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENAFOR — Saisie Temps Réel Interphases BOP</title>
+    <link rel="stylesheet" href="style.css">
+<base target="_blank">
+</head>
+<body>
+    <!-- Header -->
+    <div class="app-header">
+        <div class="app-title">INTERPHASE1</div>
+        <div class="window-controls">
+            <button class="window-btn">─</button>
+            <button class="window-btn">□</button>
+            <button class="window-btn">✕</button>
+        </div>
+    </div>
+
+    <!-- Sub Header -->
+    <div style="background: #e8e8e8; padding: 5px 20px; font-size: 12px; font-weight: bold; border-bottom: 1px solid #ccc;">
+        SHEET - DATA
+    </div>
+
+    <!-- Main Title -->
+    <div class="main-title">
+        <h1>ENAFOR — Saisie Temps Réel Interphases BOP</h1>
+    </div>
+
+    <!-- Top Controls -->
+    <div class="top-controls">
+        <div class="control-group">
+            <label for="entry-date">Date</label>
+            <input type="date" id="entry-date" value="2026-05-09">
+        </div>
+        <div class="control-group">
+            <label for="rig-select">RIG</label>
+            <select id="rig-select">
+                <option value="ENF#06" selected>ENF#06</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="pusher-select">Senior Tool Pusher</label>
+            <select id="pusher-select">
+                <option value="STP-001" selected>Senior Tool Pusher</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="main-grid">
+        <!-- Interphase Column -->
+        <div class="interphase-column">
+            <div class="section-header">INTERPHASE</div>
+            <div class="interphase-subheader">INTER-PHASES</div>
+            <div class="interphase-list" id="interphase-list">
+                <!-- سيتم تعبئته بواسطة JavaScript -->
+            </div>
+        </div>
+
+        <!-- Operations Column -->
+        <div class="operations-column">
+            <div class="section-header">OPERATIONS</div>
+            <div class="operations-subheader">OPERATION</div>
+            <div class="operations-list" id="operations-list">
+                <div style="text-align: center; padding: 30px; color: #666; font-size: 14px;">
+                    ← Select an interphase to view operations
+                </div>
+            </div>
+        </div>
+
+        <!-- Time Hours Column -->
+        <div class="time-column">
+            <div class="section-header">COMPENSATED TIME HOURS</div>
+            <div class="time-subheader">COMPENSATES TIME HOURS</div>
+            <div class="time-sections">
+                <!-- BOP 5000 PSI -->
+                <div class="time-section">
+                    <div class="time-section-title">BOP 5000 PSI HRS</div>
+                    <div class="time-section-subtitle">
+                        <span>COMPENSATES TIME HOURS</span>
+                    </div>
+                    <div class="time-section-subtitle">
+                        <span>HRS</span>
+                        <span>TOT.H</span>
+                    </div>
+                    <div class="time-inputs" id="psi5000-inputs">
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi5000-0">
+                            <input type="text" placeholder="0.0" id="psi5000-total-0">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi5000-1">
+                            <input type="text" placeholder="0.0" id="psi5000-total-1">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi5000-2">
+                            <input type="text" placeholder="0.0" id="psi5000-total-2">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi5000-3">
+                            <input type="text" placeholder="0.0" id="psi5000-total-3">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi5000-4">
+                            <input type="text" placeholder="0.0" id="psi5000-total-4">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi5000-5">
+                            <input type="text" placeholder="0.0" id="psi5000-total-5">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi5000-6">
+                            <input type="text" placeholder="0.0" id="psi5000-total-6">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOP 10000 PSI -->
+                <div class="time-section">
+                    <div class="time-section-title">BOP 10000 PSI HRS</div>
+                    <div class="time-section-subtitle">
+                        <span>COMPENSATES TIME HOURS</span>
+                    </div>
+                    <div class="time-section-subtitle">
+                        <span>HRS</span>
+                        <span>TOT.H</span>
+                    </div>
+                    <div class="time-inputs" id="psi10000-inputs">
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi10000-0">
+                            <input type="text" placeholder="0.0" id="psi10000-total-0">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi10000-1">
+                            <input type="text" placeholder="0.0" id="psi10000-total-1">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi10000-2">
+                            <input type="text" placeholder="0.0" id="psi10000-total-2">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi10000-3">
+                            <input type="text" placeholder="0.0" id="psi10000-total-3">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi10000-4">
+                            <input type="text" placeholder="0.0" id="psi10000-total-4">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi10000-5">
+                            <input type="text" placeholder="0.0" id="psi10000-total-5">
+                        </div>
+                        <div class="time-row">
+                            <input type="text" placeholder="0.0" id="psi10000-6">
+                            <input type="text" placeholder="0.0" id="psi10000-total-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Controls -->
+    <div class="bottom-controls">
+        <div class="bottom-left">
+            <button class="btn btn-info" id="btn-refresh">Refresh RowSource</button>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 12px; font-weight: bold;">Restore saved data</span>
+                <select style="padding: 5px; border: 2px solid #666; min-width: 150px;">
+                    <option>Select saved entry...</option>
+                </select>
+            </div>
+        </div>
+        <div class="bottom-right">
+            <button class="btn btn-primary" id="btn-confirm">Confirm</button>
+            <button class="btn btn-secondary" id="btn-edit">Edit</button>
+            <button class="btn btn-info" id="btn-copy">Copy data</button>
+            <button class="btn btn-danger" id="btn-delete">Delete</button>
+            <button class="btn btn-primary" id="btn-save">SAVE</button>
+            <button class="btn btn-dark" id="btn-exit">EXIT</button>
+        </div>
+    </div>
+
+    <!-- Data Table -->
+    <div class="data-table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>DATE</th>
+                    <th>RIG</th>
+                    <th>TOOL PUSHER</th>
+                    <th>INTERPHASE</th>
+                    <th>OPERATION</th>
+                    <th>5000 PSI HRS</th>
+                    <th>5000 PSI TOT.H</th>
+                    <th>10000 PSI HRS</th>
+                    <th>10000 PSI TOT.H</th>
+                </tr>
+            </thead>
+            <tbody id="data-table-body">
+                <!-- سيتم تعبئته بواسطة JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span id="status-message">Ready — ENAFOR BOP Real-Time Data Entry System v1.0</span>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Modal Title</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                Modal content...
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal()">OK</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
